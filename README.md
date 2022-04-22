@@ -33,12 +33,12 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">RestAPI for Product and Warehouse Loader</h3>
 
   <p align="center">
-    project_description
+    This sample project example shows how to implement a load from CSV or XLSX files with REST populating a H2 in-memory database.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/github_username/juliovitorino"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
