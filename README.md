@@ -38,14 +38,14 @@
   <p align="center">
     This sample project example shows how to implement a load from CSV or XLSX files with REST populating a H2 in-memory database.
     <br />
-    <a href="https://github.com/juliovitorino"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/juliovitorino/JavaProductsWarehouseLoader"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/https://github.com/juliovitorino/JavaProductsWarehouseLoader/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/https://github.com/juliovitorino/JavaProductsWarehouseLoader/issues">Request Feature</a>
   </p>
 </div>
 
