@@ -1,6 +1,7 @@
 package br.com.juliovitorino.msproductcharger.services;
 
 import br.com.juliovitorino.msproductcharger.dtos.WarehouseDTO;
+import br.com.juliovitorino.msproductcharger.exceptions.SkuExistenteProductException;
 import br.com.juliovitorino.msproductcharger.loadfiles.AbstractGatewayLoadFilesProduct;
 import br.com.juliovitorino.msproductcharger.models.ProductModel;
 import br.com.juliovitorino.msproductcharger.models.WarehouseModel;
@@ -86,5 +87,12 @@ public class ProductService {
      */
     public List<ProductModel> loaderFile(MultipartFile file) throws IOException {
         return AbstractGatewayLoadFilesProduct.getInstance(file.getContentType(), file).execute();
+    }
+
+    public void isProductModelExists(ProductModel pmItem) throws SkuExistenteProductException {
+        // Verify sku exists into the database. Locate the product info by sku field
+        if(pmItem != null) {
+            throw new SkuExistenteProductException("SKU " + pmItem.getSku() + " exists, VERIFIY and try new one.");
+        }
     }
 }

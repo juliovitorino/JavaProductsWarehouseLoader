@@ -47,10 +47,7 @@ public class ProductController {
         throws SkuExistenteProductException {
 
         // Verify sku exists into the database. Locate the product info by sku field
-        ProductModel pm = productService.findBySku(productDTO.getSku());
-        if(pm != null && pm.getSku().equals(productDTO.getSku())) {
-            throw new SkuExistenteProductException("SKU " + productDTO.getSku() + "Exists, VERIFIY and try new one.");
-        }
+        productService.isProductModelExists(productService.findBySku(productDTO.getSku()));
 
         // Create a Model to be populated and copy essential attributes from DTO to Model
         final ProductModel productModel = ProductMapper.INSTANCE.requestDtoModel(productDTO);
@@ -157,13 +154,8 @@ public class ProductController {
 
         // add each entry to the database
         for(ProductModel pmItem : pmlst){
-
             // Verify sku exists into the database. Locate the product info by sku field
-            ProductModel pm = productService.findBySku(pmItem.getSku());
-            if(pm != null && pm.getSku().equals(pmItem.getSku())) {
-                throw new SkuExistenteProductException("SKU " + pmItem.getSku() + " exists, VERIFIY and try new one.");
-            }
-
+            productService.isProductModelExists(productService.findBySku(pmItem.getSku()));
             productService.addProduct(pmItem);
         }
 
