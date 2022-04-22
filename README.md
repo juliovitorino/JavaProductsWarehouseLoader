@@ -13,7 +13,8 @@
 <h3 align="center">RestAPI for Product and Warehouse Loader</h3>
 
   <p align="center">
-    This sample project example shows how to implement a load from CSV or XLSX files with REST populating a H2 in-memory database.
+    This sample project example shows how to implement a load from CSV or XLSX 
+files with REST API populating a H2 in-memory database using Factory Design Pattern.
     <br />
     <a href="https://github.com/juliovitorino/JavaProductsWarehouseLoader"><strong>Explore the docs »</strong></a>
     <br />
