@@ -92,6 +92,18 @@ Start application
 ## Files for upload
 
 You can find all the files for upload and recharge the H2 database using this url https://github.com/juliovitorino/JavaProductsWarehouseLoader/tree/master/files-to-load
+<p>
+All files are named as indicated below.
+<ul>
+<li>massa-de-dados-01.csv</li>
+<li>massa-de-dados-01.xlsx</li>
+</ul>
+</p>
+
+<p>
+If you will be use Postman Tool, use POST method followed the appropriate url and then choose form-data, fill up the Key and value informations,
+where Key = file and value = name mentioned above.
+</p>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- JSON Body Examples -->
@@ -169,13 +181,13 @@ You can find all the files for upload and recharge the H2 database using this ur
 
 <!-- USAGE EXAMPLES -->
 ## Endpoints
-| Method | Url                                                                                           | Body                             | Description    | Returns   | 
-|--------|-----------------------------------------------------------------------------------------------|----------------------------------|----------------|-----------|
-| POST   | http://localhost:8080/upload                                                                  | form-data                        | Upload file    | -         |
-| POST   | http://localhost:8080/search-product?sku=1048                                                 | {name:,email:,password:,roleId:} | Search Product | Product   |
-| PUT    | http://localhost:8080/update-product                                                          | {sku:1048,email:lorem ipsum}     | Update product | Product   |
-| DELETE | http://localhost:8080/delete-product                                                          | null                             | Delete product | -         |
-| GET    | http://localhost:8080/add-product                                                             | See Body section                 | Add Product    | Product   |
+| Method | Url                                                                                           | Body                                | Description    | Returns   | 
+|--------|-----------------------------------------------------------------------------------------------|-------------------------------------|----------------|-----------|
+| POST   | http://localhost:8080/upload                                                                  | form-data                           | Upload file    | -         |
+| GET    | http://localhost:8080/search-product?sku=1048                                                 | {"sku": "1048"}                     | Search Product | Product   |
+| POST   | http://localhost:8080/update-product                                                          | {"sku":1048,"name":"lorem ipsum"}   | Update product | Product   |
+| GET    | http://localhost:8080/delete-product                                                          | null                                | Delete product | -         |
+| POST   | http://localhost:8080/add-product                                                             | See Body section                    | Add Product    | Product   |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
