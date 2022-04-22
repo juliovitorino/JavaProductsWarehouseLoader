@@ -111,6 +111,7 @@ public class ProductController {
 
        // Locate the product info by sku field
        ProductModel productModel = productService.findBySku(productDTO.getSku());
+       if(productModel == null) return new ResponseEntity<ProductResponseDTO>(new ProductResponseDTO(), HttpStatus.OK);
 
        // Change the attributes and then save
         productModel.setName(productDTO.getName());
