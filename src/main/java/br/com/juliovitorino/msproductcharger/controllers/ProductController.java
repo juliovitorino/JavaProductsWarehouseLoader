@@ -173,6 +173,7 @@ public class ProductController {
 
         // Create an instance for response
         ProductResponseDTO response = new ProductResponseDTO();
+        if(productModel == null) return response;
 
         // create an instance for inventory and initiate it.
         InventoryDTO inventoryDTO = new InventoryDTO();
