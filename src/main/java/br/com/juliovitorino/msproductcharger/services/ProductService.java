@@ -66,7 +66,9 @@ public class ProductService {
      * @return  ProductModel object
      */
     public void deleteBySku(long sku){
-        productRepository.deleteById(sku);
+        if(productRepository.existsById(sku)) {
+            productRepository.deleteById(sku);
+        }
     }
 
     /**
